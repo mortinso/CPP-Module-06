@@ -1,4 +1,4 @@
-NAME = scalar
+NAME = convert
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
@@ -7,7 +7,7 @@ SRC_DIR = src
 INC_DIR = inc
 OBJ_DIR = .obj
 
-SRC_FILES = main.cpp ScalarConverter.cpp
+SRC_FILES = main.cpp ScalarConverter.cpp conversions.cpp printers.cpp
 INC_FILES = ScalarConverter.hpp
 
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))

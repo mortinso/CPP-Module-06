@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:03:04 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/27 18:08:12 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/07 18:32:46 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,38 @@ ScalarConverter& ScalarConverter::operator = ( const ScalarConverter &_scalarcon
 
 // -----------------------------------Methods-----------------------------------
 void	ScalarConverter::convert( std::string literal ) {
-	
+	size_t	i = 0;
+	int		decimals = 0;
+
+	if (literal[i] == '-')
+		i++;
+	if (literal[i] && literal.find_first_not_of("-0123456789.f") == literal.npos)
+	{
+		while (i < literal.length())
+		{
+			if (literal[i] == '.')
+				decimals++;
+			if (decimals > 1 || literal[i] == '-' || (literal[i] == 'f' && i != literal.length() - 1))
+			{
+				std::cout << "Error: string does not represent a valid literal" << std::endl;
+				std::exit(0);
+			}
+			else if (decimals == 1 && i == literal.length() - 1 && literal[i] == 'f')
+				toFloat(literal);
+			i++;
+		}
+		if (decimals == 1 && literal.find_first_of("f") == literal.npos)
+			toDouble(literal);
+		else if (decimals == 0 && literal.find_first_of(".f") == literal.npos)
+			toInt(literal);
+	}
+	else if (literal.length() == 1)
+		toChar(literal);
+	std::cout << "not triggered" << std::endl;
+/* 	else
+	{
+		// try pseudo cases
+	}
+	// if not pseudo cases
+	//	not a literal */
 }
