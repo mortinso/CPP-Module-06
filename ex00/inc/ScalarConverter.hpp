@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:03:00 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/07 19:13:11 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/07 19:25:59 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,11 @@ void	toInt( std::string literal );
 void	toChar( std::string literal );
 void	toFloat( std::string literal );
 void	toDouble( std::string literal );
+void	checkPseudos(std::string literal);
 
 //printers.cpp
 void	printBasic( char c, int i, float f, double d, size_t cases );
 void	printImpossible(float f, double d, size_t cases );
+void	printPseudos( std::string f, std::string d );
 
 #endif

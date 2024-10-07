@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:03:04 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/07 18:32:46 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/07 19:26:45 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ScalarConverter::convert( std::string literal ) {
 				decimals++;
 			if (decimals > 1 || literal[i] == '-' || (literal[i] == 'f' && i != literal.length() - 1))
 			{
-				std::cout << "Error: string does not represent a valid literal" << std::endl;
+				std::cerr << "Error: string does not represent a valid literal" << std::endl;
 				std::exit(0);
 			}
 			else if (decimals == 1 && i == literal.length() - 1 && literal[i] == 'f')
@@ -66,11 +66,7 @@ void	ScalarConverter::convert( std::string literal ) {
 	}
 	else if (literal.length() == 1)
 		toChar(literal);
-	std::cout << "not triggered" << std::endl;
-/* 	else
-	{
-		// try pseudo cases
-	}
-	// if not pseudo cases
-	//	not a literal */
+	checkPseudos(literal);
+	std::cerr << "Error: string does not represent a valid literal" << std::endl;
+	std::exit(0);
 }

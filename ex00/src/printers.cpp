@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 19:10:50 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/07 19:11:32 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/07 19:23:41 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,18 @@ void	printBasic( char c, int i, float f, double d, size_t cases ) {
 	std::exit(0);
 }
 
-void	printImpossible(float f, double d, size_t cases ) {
+void	printImpossible( float f, double d, size_t cases ) {
 	std::cout << "char: impossible" << std::endl;
 	std::cout << "int: impossible" << std::endl;
 	std::cout << "float: " << std::fixed << std::setprecision(cases) << f << "f" << std::endl;
 	std::cout << "double: " << std::fixed << std::setprecision(cases) << d << std::endl;
+	std::exit(0);
+}
+
+void	printPseudos( std::string f, std::string d ) {
+	std::cout << "char: impossible" << std::endl;
+	std::cout << "int: impossible" << std::endl;
+	std::cout << "float: " << f << std::endl;
+	std::cout << "double: " << d << std::endl;
 	std::exit(0);
 }

@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:33:01 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/07 19:11:52 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/07 19:29:28 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ void	toFloat( std::string literal ) {
 
 void	toDouble( std::string literal ) {
 	size_t	cases = literal.length() - literal.find_first_of(".") - 1;
-	if (cases == 0)
-		cases++;
+	if (cases == 0 || literal.find_first_of(".") == literal.npos)
+		cases = 1;
 	double	d = atof(literal.c_str());
 	int		i = static_cast<int>(d);
 	float	f = static_cast<float>(d);
@@ -76,4 +76,16 @@ void	toDouble( std::string literal ) {
 		printImpossible(f, d, cases);
 
 	printBasic(c, i, f, d, cases);
+}
+
+void	checkPseudos(std::string literal) {
+	std::string float_pseudo[3] = { "+inff", "-inff", "nanf" };
+	std::string double_pseudo[3] = { "+inf", "-inf", "nan" };
+	
+	for (int i = 0; i < 3; i++) {
+		if (literal.compare(float_pseudo[i]) == 0)
+			printPseudos(float_pseudo[i], double_pseudo[i]);
+		if (literal.compare(double_pseudo[i]) == 0)
+			printPseudos(float_pseudo[i], double_pseudo[i]);
+	}
 }
