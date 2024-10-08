@@ -1,4 +1,4 @@
-NAME = serializer
+NAME = serialize
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address

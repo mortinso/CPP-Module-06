@@ -4,4 +4,5 @@
 *.txt
 *.png
 ex00/convert
-ex01/serializer
+ex01/serialize
+ex01/identify
