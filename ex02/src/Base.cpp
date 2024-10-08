@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:05:50 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/08 16:05:51 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:08:21 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 // Destructor
 Base::~Base( void ) {
-	std::cout << "Base destructor called" <<std::endl;
+	// std::cout << "Base destructor called" <<std::endl;
 }

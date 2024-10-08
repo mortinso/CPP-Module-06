@@ -1,7 +1,7 @@
 NAME = identify
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -Wno-unused #-fsanitize=address
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
 
 SRC_DIR = src
 INC_DIR = inc

@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:05:39 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/08 16:35:27 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/08 16:49:02 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 # define RESET "\e[0m"
 
 Base	*generate( void );
-void	identify( Base* p );
-void	identify( Base& p );
+void	identify( Base *p );
+void	identify( Base &p );
 
 
 #endif
