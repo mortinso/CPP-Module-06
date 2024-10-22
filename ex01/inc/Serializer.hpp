@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:15:06 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/08 15:50:13 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:26:10 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 # define RESET "\e[0m"
 
 struct Data {
-	std::string		user_name;
-	unsigned int	user_id;
+	std::string		name;
+	unsigned int	id;
 };
 
 class Serializer {
@@ -41,7 +41,7 @@ class Serializer {
 		static uintptr_t	serialize( Data* ptr );
 		static Data*		deserialize( uintptr_t raw );
 
-		
+
 };
 
 #endif
