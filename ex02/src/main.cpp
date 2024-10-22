@@ -6,14 +6,14 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:09:17 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/08 17:33:11 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:23:04 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/identifier.hpp"
 
 int	main( void ) {
-	{ // Generate and identify 6
+	{ // Generate and identify random
 		std::cout << INVERT << "Generate and identify random:" << RESET << std::endl;
 		Base *random = generate();
 
