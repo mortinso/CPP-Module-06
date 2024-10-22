@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:15:17 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/08 15:42:44 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:22:06 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,8 @@ Serializer::~Serializer( void ) {
 // Copy assignment operator overload
 Serializer& Serializer::operator = ( const Serializer &_serializer ) {
 	std::cout << "Serializer copy assignment operator called" << std::endl;
-	if (this != &_serializer) {
-		// this->setValue(_serializer.getValue());
-	}
+	if (this != &_serializer)
+		*this = _serializer;
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:03:04 by mortins-          #+#    #+#             */
-/*   Updated: 2024/10/07 19:26:45 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:22:31 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,8 @@ ScalarConverter::~ScalarConverter( void ) {
 // Copy assignment operator overload
 ScalarConverter& ScalarConverter::operator = ( const ScalarConverter &_scalarconverter ) {
 	std::cout << "ScalarConverter copy assignment operator called" << std::endl;
-	if (this != &_scalarconverter) {
-		// this->setValue(_scalarconverter.getValue());
-	}
+	if (this != &_scalarconverter)
+		*this = _scalarconverter;
 	return (*this);
 }
 
